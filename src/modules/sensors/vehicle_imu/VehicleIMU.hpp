@@ -129,6 +129,9 @@ private:
 
 	uint8_t _delta_velocity_clipping{0};
 
+	hrt_abstime _last_clipping_notify{0};
+	orb_advert_t _mavlink_log_pub{nullptr};
+
 	bool _intervals_configured{false};
 
 	const uint8_t _instance;
